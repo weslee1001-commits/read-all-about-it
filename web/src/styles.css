@@ -1,0 +1,22 @@
+:root{
+  --prime-blue: #0073bb;
+  --accent: #ff9900;
+  --bg: #ffffff;
+}
+body{font-family:system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; background:var(--bg); margin:0}
+.header{background:linear-gradient(90deg,var(--prime-blue),#005fa3); color:white; padding:1rem}
+.app{max-width:900px;margin:1rem auto;padding:1rem}
+.product{border:1px solid #eee;padding:1rem;border-radius:8px}
+.price{color:var(--accent);font-weight:700}
+.buy{display:inline-block;margin-top:0.5rem;background:var(--accent);color:#000;padding:0.5rem 0.75rem;border-radius:6px;text-decoration:none}
+.write{margin-top:1rem}
+textarea{width:100%;min-height:100px;margin-top:0.5rem}
+.actions{margin-top:0.5rem}
+.primary{background:var(--prime-blue);color:white;padding:0.5rem 0.75rem;border:none;border-radius:6px}
+.secondary{margin-left:0.5rem;padding:0.5rem 0.75rem}
+.reviews{margin-top:1rem}
+.review{border-bottom:1px solid #eee;padding:0.5rem 0}
+.review.draft{opacity:0.8}
+.rating{color:var(--accent)}
+
+.ai-badge{background:#fff;color:#000;border-radius:6px;padding:0.25rem 0.5rem;border:1px solid rgba(0,0,0,0.08);font-weight:600}

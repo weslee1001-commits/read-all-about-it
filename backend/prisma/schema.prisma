@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String?
+  role      String   @default("user")
+  createdAt DateTime @default(now())
+  reviews   Review[]
+}
+
+model Review {
+  id         Int      @id @default(autoincrement())
+  productId  String
+  authorId   Int?
+  authorName String
+  rating     Int
+  content    String
+  approved   Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  author     User?    @relation(fields: [authorId], references: [id])
+}
+
+model AffiliateClick {
+  id          Int      @id @default(autoincrement())
+  merchant    String
+  affiliateId String?
+  url         String
+  createdAt   DateTime @default(now())
+}
